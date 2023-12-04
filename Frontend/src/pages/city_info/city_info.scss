@@ -1,0 +1,70 @@
+@use './../../template/mixins.scss' as *;
+@use './../../template/variables.scss' as *;
+
+.page_city_info {
+    @include Flex(column, flex-start, center, wrap, 0rem, 1rem);
+    min-height: 100vh;
+    width: 100vw;
+    opacity: 0;
+    animation: $fadeIn;
+}
+
+.info_window {
+    @include Flex(column, flex-start, center, wrap, 0rem, 0rem);
+    min-width: 400px;
+    width: 20%;
+}
+
+.info_window_toolbar {
+    @include Flex(row, flex-start, center, wrap, 0rem, 0rem);
+    width: 100%;
+}
+
+.info_window_body {
+    @include Flex(column, flex-start, center, wrap, 1.25rem, 0rem);
+    width: 95%;
+    padding: 5rem 0rem;
+}
+
+.live_clock {
+    @include Flex(column, flex-start, center, wrap, 0rem, 0rem);
+    width: 100%;
+    font-size: 4rem;
+    font-weight: 500;
+    color: $color_light_blue;
+}
+
+.city_name {
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.weather {
+    @include Flex(column, flex-start, center, wrap, 0rem, 0rem);
+}
+
+.weather_icon {
+    height: 6.5rem;
+}
+
+.weather_description {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.weather_details {
+    @include Flex(column, flex-start, center, wrap, 1rem, 0rem);
+}
+
+.weather_details_item {
+    @include Flex(row, flex-start, center, wrap, 1.5rem, 0rem);
+    padding: 0.25rem 0rem;
+    width: 100%;
+    font-size: 1.75rem;
+    font-weight: 500;
+}
+
+.weather_details_item_icon {
+    color: $color_dark_blue;
+    font-size: 2rem;
+}

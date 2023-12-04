@@ -1,0 +1,41 @@
+@use './template/variables.scss' as *;
+@use './template/fonts.scss' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    user-select: none;
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    background: rgb(19,30,40);
+    background: linear-gradient(43deg, rgba(19,30,40,1) 0%, rgba(18,32,44,1) 35%, rgba(20,37,52,1) 100%);
+    color: $color_text;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: $color_light_blue;
+
+    &:hover {
+        color: $color_hightlight;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

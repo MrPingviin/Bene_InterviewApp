@@ -1,0 +1,132 @@
+@use './../../template/mixins.scss' as *;
+@use './../../template/variables.scss' as *;
+
+.page_city_search {
+    @include Flex(column, flex-start, center, wrap, 0rem, 1rem);
+    min-height: 100vh;
+    width: 100vw;
+    opacity: 0;
+    animation: $fadeIn;
+}
+
+.search_input {
+    @include Flex(row, flex-start, center, no-wrap, 1rem, 0rem);
+    padding: 0.5rem 0rem;
+    border-bottom: 0.1rem solid $color_light_blue;
+    width: 100%;
+}
+
+.input_search {
+    border: none;
+    background: none;
+    font-size: 2rem;
+    color: $color_text;
+
+    &:focus {
+        outline: none;
+        border: none;
+    }
+}
+
+.icon {
+    font-size: 2rem;
+    color: $color_text;
+}
+
+.search_results {
+    @include Flex(column, flex-start, center, wrap, 0.75rem, 0rem);
+    width: 100%;
+    padding: 1rem 0rem;
+    font-size: 1.75rem;
+    color: $color_light_blue;
+}
+
+.search_result {
+    @include Flex(row, space-between, center, wrap, 0rem, 0rem);
+    width: 100%;
+    word-break: break-all;
+    opacity: 0;
+    animation: resultsFadeIn 0.4s linear forwards;
+}
+
+.search_window {
+    min-width: 460px;
+    width: 25%;
+}
+
+.search_window {
+    @include Flex(column, flex-start, center, wrap, 0rem, 0rem);
+}
+
+.search_window_toolbar {
+    @include Flex(row, flex-start, center, wrap, 0rem, 0rem);
+    width: 100%;
+}
+
+.search_window_body {
+    @include Flex(column, flex-start, flex-start, wrap, 0rem, 0rem);
+    width: 95%;
+    padding: 5rem 0rem;
+}
+
+.search_highlighted {
+    color: $color_text;
+}
+
+.search_result_cityname {
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+.button_back {
+    background: none;
+    color: $color_light_blue;
+    font-size: 3rem;
+    border: none;
+
+    &:hover {
+        opacity: 0.80;
+        cursor: pointer;
+    }
+}
+
+.button_save {
+    font-size: 1.25rem;
+    height: 100%;
+    color: $color_text;
+    background: none;
+    border: 0.1rem solid $color_text;
+    padding: 0.25rem;
+
+    &:hover {
+        opacity: 0.80;
+        cursor: pointer;
+        animation: saveButtonHighlight 0.10s linear forwards;
+    }
+}
+
+
+@keyframes resultsFadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes saveButtonHighlight {
+
+    100% {
+        background-color: $color_text;
+        color: $color_black;
+    }
+}

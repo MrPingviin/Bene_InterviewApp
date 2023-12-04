@@ -1,0 +1,8 @@
+@use './../../template/mixins.scss' as *;
+@use './../../template/variables.scss' as *;
+
+.page_loading {
+    @include Flex(column, center, center, wrap, 0rem, 0rem);
+    min-height: 100vh;
+    width: 100vw;
+}
