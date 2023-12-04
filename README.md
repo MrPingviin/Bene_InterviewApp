@@ -26,16 +26,16 @@ I left the .env file in the project on purpose. The API is free and public plus 
 
 ## How to host the demo
 `npm install`
-Install the required dependencies both in the frontend and backend folder.
+=> Install the required dependencies both in the frontend and backend folder.
 
 `npm run dev`
-Start the frontend dev server on your local computer. (The default port is 5173).
+=> Start the frontend dev server on your local computer. (The default port is 5173).
 
 `npm start`
-Start the backend NodeJS server on your local computer. (The default port is 3500).
+=> Start the backend NodeJS server on your local computer. (The default port is 3500).
 
 `http://localhost:5173/`
-You can reach the demo at this address. Make sure you have both the frontend and backend server running.
+=> You can reach the demo at this address. Make sure you have both the frontend and backend server running.
 
 That's it. Now you have a cool weather app running on your system. Yay!
 
