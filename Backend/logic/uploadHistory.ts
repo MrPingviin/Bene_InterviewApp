@@ -12,11 +12,9 @@ const uploadHistory = async (result: (CityHistory | [])) => {
 
     if (!Array.isArray(result)) {
         try {
-            await mongoose.connect(DB_URL);
             const duplicationCheck = await historyModel.findOne({ city_name: result.city_name });
 
             if (duplicationCheck !== null) {
-                await mongoose.disconnect();
                 return false;
             }
 
@@ -27,7 +25,6 @@ const uploadHistory = async (result: (CityHistory | [])) => {
             })
 
             await newHistory.save();
-            await mongoose.disconnect();
             return true;
         } catch (error) {
             console.log(error);

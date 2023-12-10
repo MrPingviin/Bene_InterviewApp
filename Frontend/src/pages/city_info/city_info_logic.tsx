@@ -21,9 +21,8 @@ const emptyCityInfo: CityInfo = {
       sunset: 0,
     },
     timezone: 0,
-  }
+  },
 };
-
 
 const OpenWeatherIconGetter = (iconName: string) => {
   return `http://openweathermap.org/img/w/${iconName}.png`;

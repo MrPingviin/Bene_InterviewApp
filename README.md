@@ -11,6 +11,7 @@ Used technologies:
 - MongoDB ( https://www.mongodb.com/ )
 - Mongoose ( https://mongoosejs.com/ )
 - MomentJS ( https://momentjs.com/ )
+- Cypress ( https://www.cypress.io/ )
 
 I left the .env file in the project on purpose. The API is free and public plus this key is only for this project anyway. 
 
@@ -39,13 +40,25 @@ I left the .env file in the project on purpose. The API is free and public plus 
 
 That's it. Now you have a cool weather app running on your system. Yay!
 
+## How to run the tests
+
+### In the /Frontend/ folder
+
+#### Unit tests
+`npm run vitest:run`
+=> To run the tests in the `Console`/`Terminal`.
+
+#### E2E tests
+`npm run cypress:run`
+=> To run the tests in the `Console`/`Terminal`.
+or <br />
+`npm run cypress:open`
+=> To run the tests in the integrated browser.
 
 ### The documentation and the project is WIP at the moment!
 
 ### Project TODO:
-- Tests
+- Backend tests
 - Mobile, tablet view
-- More detailed documentation
-- Polishment of the codebase, loading screen
 - Remove option for the saved cities
 

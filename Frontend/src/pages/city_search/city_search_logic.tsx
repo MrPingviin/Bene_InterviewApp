@@ -212,25 +212,25 @@ const SavedCitiesDownloader = async (): Promise<CityHistory[]> => {
   }
 };
 
-const SavedCitiesFilterer = async (searchWord: string) => {
+const SavedCitiesFilterer = async (searchWord: string): Promise<string[]> => {
   try {
     const alreadySavedCities: CityHistory[] = await SavedCitiesDownloader();
     const alreadySavedCitiesArray = alreadySavedCities.map((city: CityHistory) => city.city_name);
 
     if (searchWord.trim() === "") {
-      return [];
+      return [] as string[];
     }
 
     return capitals
       .filter((capital) =>
         capital.toLowerCase().includes(searchWord.toLowerCase())
       )
-      .filter((capital) => !alreadySavedCitiesArray.includes(capital));
+      .filter((capital) => !alreadySavedCitiesArray.includes(capital)) as string[];
   } catch (error) {
     console.error(error);
-    return [];
+    return [] as string[];
   }
 };
 
 // eslint-disable-next-line react-refresh/only-export-components
-export { SavedCitiesFilterer, capitals };
+export { SavedCitiesFilterer, capitals, SavedCitiesDownloader };
