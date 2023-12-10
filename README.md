@@ -52,6 +52,7 @@ That's it. Now you have a cool weather app running on your system. Yay!
 #### E2E tests
 `npm run cypress:run`
 => To run the tests in the `Console`/`Terminal`.
+
 `npm run cypress:open`
 => To run the tests in the integrated browser.
 
