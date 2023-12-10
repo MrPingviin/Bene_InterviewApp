@@ -55,8 +55,6 @@ That's it. Now you have a cool weather app running on your system. Yay!
 `npm run cypress:open`
 => To run the tests in the integrated browser.
 
-### The documentation and the project is WIP at the moment!
-
 ### Project TODO:
 - Backend tests
 - Mobile, tablet view
