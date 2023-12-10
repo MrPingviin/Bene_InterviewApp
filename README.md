@@ -11,6 +11,7 @@ Used technologies:
 - MongoDB ( https://www.mongodb.com/ )
 - Mongoose ( https://mongoosejs.com/ )
 - MomentJS ( https://momentjs.com/ )
+- Vitest ( https://vitest.dev/ )
 - Cypress ( https://www.cypress.io/ )
 
 I left the .env file in the project on purpose. The API is free and public plus this key is only for this project anyway. 
@@ -51,7 +52,6 @@ That's it. Now you have a cool weather app running on your system. Yay!
 #### E2E tests
 `npm run cypress:run`
 => To run the tests in the `Console`/`Terminal`.
-or <br />
 `npm run cypress:open`
 => To run the tests in the integrated browser.
 
